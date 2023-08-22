@@ -68,6 +68,26 @@ class Testing(unittest.TestCase):
         end = time.time()
         print(f'Insert[last] time: {end - start}')
 
+        #comprehension examples
+        print([i for i in range(0,2)])
+        print([[i,j] for i in range(0,2) for j in range(0,2)])
+        print([[i, j, k] for i in range (0, 2) for j in range (0, 2) for k in range (0, 2)])
+
+        #slicing: start:end:step -> 0,len(list),1
+        my_list = [1,2,3,4,5]
+        #first three elements
+        self.assertEqual(my_list[:3], [1,2,3])
+
+        #last two
+        self.assertEqual(my_list[-2:], [4,5])
+
+        #every other
+        self.assertEqual(my_list[::2], [1,3,5])
+
+        #reverse
+        self.assertEqual(my_list[::-1], [5,4,3,2,1])
+
+
 
     def test_tuple(self):
         # tuple is immutable, ordered ()
