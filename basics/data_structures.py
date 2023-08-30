@@ -70,6 +70,7 @@ class Testing(unittest.TestCase):
 
         #comprehension examples
         print([i for i in range(0,2)])
+        #permutations
         print([[i,j] for i in range(0,2) for j in range(0,2)])
         print([[i, j, k] for i in range (0, 2) for j in range (0, 2) for k in range (0, 2)])
 
@@ -86,6 +87,9 @@ class Testing(unittest.TestCase):
 
         #reverse
         self.assertEqual(my_list[::-1], [5,4,3,2,1])
+
+        #second item
+        self.assertEqual(my_list[1], 2)
 
 
 
