@@ -24,10 +24,14 @@ class Testing(unittest.TestCase):
         my_set.remove(1)
         self.assertEqual(len(my_set), 2)
 
+        #null allowed
+        my_set = set([None, 1])
+        self.assertEqual(len(my_set), 2)        
+
     def test_list(self):
         # ordered, mutable collection of (various) elements []
 
-        my_list = (3,1,2,"hello", "world")
+        my_list = [3,1,2,"hello", "world"]
         self.assertEqual(len(my_list), 5)
         print(my_list)
 
@@ -97,7 +101,7 @@ class Testing(unittest.TestCase):
         # tuple is immutable, ordered ()
 
         #nulls and duplicates are allowed
-        my_tuple = [None, None]
+        my_tuple = (None, None)
         self.assertEqual(len(my_tuple), 2)
 
         my_tuple = (1,2,3,"hello", "world")
