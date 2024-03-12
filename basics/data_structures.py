@@ -95,6 +95,13 @@ class Testing(unittest.TestCase):
         #second item
         self.assertEqual(my_list[1], 2)
 
+        #zip
+        list1 = [1,2,3]
+        list2 = [4,5,6]
+
+        sum_list = [x + y for x, y in zip(list1, list2)]
+        print(sum_list)
+
 
 
     def test_tuple(self):
